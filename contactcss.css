@@ -1,0 +1,263 @@
+@font-face {
+  font-family: 'Daydream';
+  src: url(Fonts/Daydream.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'K2Bold';
+  src: url(Fonts/K2D-Bold.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Arcade';
+  src: url(Fonts/ArcadeAlternate.ttf);
+  font-weight: 400;
+}
+
+body {
+  margin: 0; /* Verwijder marges */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
+  url("Images/achtergrond.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dadc9b; /* Blauwe kleur */
+  padding: 10px 10px; /* Voeg padding toe */
+  position: relative;
+  flex-wrap: nowrap; /* Zorg ervoor dat de inhoud niet wrapt bij verkleining */
+  border: 3px solid black;
+}
+
+.topnav .swoosh {
+  height: 100px; /* Pas de hoogte aan indien nodig */
+  
+}
+
+.topnav .swoosh.left {
+  margin-right: 0; /* Verwijder marge aan de rechterkant van de linker afbeelding */
+}
+
+.topnav .swoosh.right {
+  margin-left: 0; /* Verwijder marge aan de linkerkant van de rechter afbeelding */
+}
+
+.topnav .logo {
+  flex-shrink: 0; /* Zorg ervoor dat het logo niet krimpt */
+  margin: 0 20px; /* Optioneel: Voeg wat marge toe aan beide zijden van het logo */
+  display: flex;
+  justify-content: space-between;
+}
+
+.topnav .logo img {
+  height: 100px; /* Pas de hoogte aan om het logo 2x zo groot te maken */
+  display: inline-block; /* Zorg ervoor dat alleen het plaatje klikbaar is */
+  justify-content: space-between;
+}
+
+.topnav .nav-links {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* Zorg ervoor dat de links niet wrapen bij verkleining */
+}
+
+.topnav .nav-links.left,
+.topnav .nav-links.right {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding-left: 50px; /* Voeg wat padding toe aan de linkerkant van de linker links */
+  padding-right: 50px;
+}
+
+.topnav .nav-links.left {
+  margin-right: 20px; /* Optioneel: Voeg wat marge toe aan de rechterkant van de linker links */
+}
+
+.topnav .nav-links.right {
+  margin-left: 20px; /* Optioneel: Voeg wat marge toe aan de linkerkant van de rechter links */
+}
+
+.topnav a {
+  color: black; /* Witte tekstkleur */
+  text-align: center;
+  text-decoration: none;
+  font-size: 28px; /* Vergroot het lettertype om de knoppen groter te maken */
+  font-family: 'K2Bold'; 
+  display: flex;
+  justify-content: space-between;
+}
+
+.topnav a:hover {
+  color: white;
+}
+
+.topnav a.logo:hover {
+  background-color: transparent; /* Verwijder hoverkleur van het logo */
+}
+
+.topnav a.active {
+  color: white;
+}
+
+h1 {
+  font-family: 'Arcade';
+  align-items: end;
+  size: 200px;
+  color: whitesmoke;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.705), -2px -2px 5px rgba(255, 230, 108, 0.547);
+  text-align: right;
+  margin-right: 25px;
+ 
+}
+img[src="Images/knightsreckoningtext.png"] {
+  transition: filter 0.3s ease;
+  
+}
+
+img[src="Images/knightsreckoningtext.png"]:hover {
+  filter: brightness(1.5);
+  transform: scale(1.1);
+}
+
+img[src="Images/gouden slierten.png"] {
+  height: 20.33%;
+  width: 20.33%;
+}
+
+/* Media query voor kleinere schermen */
+@media (max-width: 1024px) {
+  .topnav img[src="Images/gouden slierten.png"] {
+    display: none; /* Verberg de slierten bij kleinere schermen */
+  }
+
+  .topnav .logo img {
+    height: 80px; /* Verklein het logo voor kleinere schermen */
+  }
+
+  .topnav a {
+    padding: 14px 16px; /* Verklein de padding voor kleinere schermen */
+    font-size: 24px; /* Verklein het lettertype voor kleinere schermen */
+  }
+
+  h1 {
+    font-size: 50px; /* Pas de grootte aan voor kleinere schermen */
+  }
+}
+
+@media (max-width: 768px) {
+  .topnav {
+    flex-wrap: nowrap; /* Zorg ervoor dat de inhoud niet wrapt bij verkleining */
+    overflow-x: hidden; /* Verwijder horizontale scroll */
+  }
+
+  .topnav .nav-links {
+    flex-wrap: nowrap; /* Zorg ervoor dat de links niet wrapen bij verkleining */
+  }
+
+  .topnav .logo img {
+    height: 50px; /* Verklein het logo voor nog kleinere schermen */
+  }
+
+  h1 {
+ font-size: 40px;
+  }
+}
+
+.contact {
+  margin-top: 100px;
+  display: flex;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 20px;
+  background-color: #F7F8DB;
+  color: black;
+  font-family: 'K2Bold';
+  border: 3px solid black;
+  display: flex; /* Gebruik flexbox om items naast elkaar te plaatsen */
+  justify-content: space-between; /* Zorg voor gelijke ruimte tussen de items */
+  align-items: flex-start; /* Zorg ervoor dat de items aan de bovenkant van de container uitgelijnd zijn */
+  gap: 20px; /* Optioneel: Stel ruimte in tussen de items */
+  margin-bottom: 100px;
+  opacity: 0.9;
+}
+
+.contact h3{
+  font-size: 45px;
+
+  }
+
+.left {
+
+  text-align: center;
+  align-items: center;
+}
+
+.middle {
+
+  text-align: center;
+  align-items: center;
+}
+
+.right {
+
+  text-align: center;
+  align-items: center;
+}
+
+.left h1{
+   margin-left: 14px;
+  text-align: center;
+  align-items: center;
+}
+
+.middle h1{
+  margin-left: 40px;
+  text-align: center;
+  align-items: center;
+}
+
+.right h1{
+  margin-left: 40px;
+  text-align: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 20px;
+  background-color: #DADC9B;
+  color: black;
+  font-family: 'K2Bold';
+  border: 3px solid black;
+  display: flex; /* Gebruik flexbox om items naast elkaar te plaatsen */
+  justify-content: space-between; /* Zorg voor gelijke ruimte tussen de items */
+  align-items: flex-start; /* Zorg ervoor dat de items aan de bovenkant van de container uitgelijnd zijn */
+  gap: 20px; /* Optioneel: Stel ruimte in tussen de items */
+}
+
+.footer h3{
+font-size: 35px;
+
+}
+
+
+
