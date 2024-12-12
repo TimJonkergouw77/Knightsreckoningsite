@@ -1,0 +1,322 @@
+@font-face {
+  font-family: 'Daydream';
+  src: url(Fonts/Daydream.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'K2Bold';
+  src: url(Fonts/K2D-Bold.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Arcade';
+  src: url(Fonts/ArcadeAlternate.ttf);
+  font-weight: 400;
+}
+
+body {
+  margin: 0; /* Verwijder marges */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
+  url("Images/achtergrond.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dadc9b; /* Blauwe kleur */
+  padding: 10px; /* Voeg padding toe */
+  position: relative;
+  flex-wrap: nowrap; /* Zorg ervoor dat de inhoud niet wrapt bij verkleining */
+  border: 3px solid black;
+}
+
+.topnav .swoosh {
+  height: 100px; /* Pas de hoogte aan indien nodig */
+}
+
+.topnav .swoosh.left {
+  margin-right: 0; /* Verwijder marge aan de rechterkant van de linker afbeelding */
+}
+
+.topnav .swoosh.right {
+  margin-left: 0; /* Verwijder marge aan de linkerkant van de rechter afbeelding */
+}
+
+.topnav .logo {
+  flex-grow: 0;
+  text-align: center;
+  padding: 0; /* Verwijder padding */
+  margin: 0; /* Verwijder marges */
+}
+
+.topnav .logo img {
+  height: 100px; /* Pas de hoogte aan om het logo 2x zo groot te maken */
+  display: inline-block; /* Zorg ervoor dat alleen het plaatje klikbaar is */
+}
+
+.topnav .nav-links {
+  display: flex;
+  flex-wrap: nowrap; /* Zorg ervoor dat de links niet wrapen bij verkleining */
+}
+
+.topnav .nav-links.left {
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin-right: 0; /* Verwijder marge aan de rechterkant */
+}
+
+.topnav .nav-links.right {
+  justify-content: flex-start;
+  flex-grow: 1;
+  margin-left: 0; /* Verwijder marge aan de linkerkant */
+}
+
+.topnav a {
+  color: black; /* Witte tekstkleur */
+  text-align: center;
+  padding: 28px 32px; /* Vergroot de padding om de knoppen groter te maken */
+  text-decoration: none;
+  font-size: 34px; /* Vergroot het lettertype om de knoppen groter te maken */
+  font-family: 'K2Bold'; 
+}
+
+.topnav a:hover {
+  background-color: #80B7CE;
+  color: white;
+}
+
+.topnav a.logo:hover {
+  background-color: transparent; /* Verwijder hoverkleur van het logo */
+}
+
+.topnav a.active {
+  background-color: #457A40;
+  color: white;
+}
+
+h1 {
+  font-family: 'Arcade';
+  align-items: end;
+  size: 200px;
+  color: whitesmoke;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.705), -2px -2px 5px rgba(255, 230, 108, 0.547);
+  text-align: right;
+  margin-right: 25px;
+ 
+}
+img[src="Images/knightsreckoningtext.png"] {
+  transition: filter 0.3s ease;
+  
+}
+
+img[src="Images/knightsreckoningtext.png"]:hover {
+  filter: brightness(1.5);
+  transform: scale(1.1);
+}
+
+img[src="Images/gouden slierten.png"] {
+  height: 20.33%;
+  width: 20.33%;
+}
+
+/* Media query voor kleinere schermen */
+@media (max-width: 1024px) {
+  .topnav img[src="Images/gouden slierten.png"] {
+    display: none; /* Verberg de slierten bij kleinere schermen */
+  }
+
+  .topnav .logo img {
+    height: 80px; /* Verklein het logo voor kleinere schermen */
+  }
+
+  .topnav a {
+    padding: 14px 16px; /* Verklein de padding voor kleinere schermen */
+    font-size: 24px; /* Verklein het lettertype voor kleinere schermen */
+  }
+
+  h1 {
+    font-size: 50px; /* Pas de grootte aan voor kleinere schermen */
+  }
+}
+
+@media (max-width: 768px) {
+  .topnav {
+    flex-wrap: nowrap; /* Zorg ervoor dat de inhoud niet wrapt bij verkleining */
+    overflow-x: hidden; /* Verwijder horizontale scroll */
+  }
+
+  .topnav .nav-links {
+    flex-wrap: nowrap; /* Zorg ervoor dat de links niet wrapen bij verkleining */
+  }
+
+  .topnav .logo img {
+    height: 50px; /* Verklein het logo voor nog kleinere schermen */
+  }
+
+  h1 {
+ font-size: 40px;
+  }
+}
+
+.About {
+  font-family: 'K2Bold';
+  background-color: #F7F8DB;
+  margin-top: 450px;
+  border: 3px solid black;
+}
+
+.DefeatGoblins {
+  background-color: #F7F8DB;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    flex-direction: row-reverse;
+    padding: 20px;
+}
+
+.DefeatGoblinstext{
+  display: flex; 
+  flex-direction: column; 
+  width: 70%; 
+  text-align: left; 
+ 
+}
+
+.DefeatGoblinstext h2{
+font-size: 40px;
+
+}
+
+.DefeatGoblinstext p{
+font-size: 20px;
+margin-right: 40px;
+width: 80%;
+}
+
+.DefeatGoblins img {
+  width: 30%; 
+    object-fit: cover; 
+    margin-right: 120px; 
+    margin-left: 80px;
+    border-radius: 10%;
+    border: 4px solid black;
+    margin-top: 30px;
+}
+
+.CaptureTower {
+  background-color: #F7F8DB;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px;
+}
+
+.CaptureTowertext{
+  display: flex; 
+  flex-direction: column; 
+  width: 70%; 
+  text-align: left; 
+ margin-left: 120px;
+}
+
+.CaptureTowertext h2{
+font-size: 40px;
+
+}
+
+.CaptureTowertext p{
+font-size: 20px;
+margin-right: 40px;
+width: 100%;
+}
+
+.CaptureTower img {
+  width: 30%; 
+    object-fit: cover; 
+    margin-right: 120px; 
+    margin-left: 80px;
+    border-radius: 10%;
+    border: 4px solid black;
+    margin-top: 30px;
+}
+
+.buyperks {
+  background-color: #F7F8DB;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    flex-direction: row-reverse;
+    padding: 20px;
+}
+
+.buyperkstext{
+  display: flex; 
+  flex-direction: column; 
+  width: 70%; 
+  text-align: left; 
+ 
+}
+
+.buyperkstext h2{
+font-size: 40px;
+
+}
+
+.buyperkstext p{
+font-size: 20px;
+margin-right: 40px;
+width: 80%;
+}
+
+.buyperks img {
+  width: 30%; 
+    object-fit: cover; 
+    margin-right: 120px; 
+    margin-left: 80px;
+    border-radius: 10%;
+    border: 4px solid black;
+    margin-top: 30px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.About, .DefeatGoblins, .CaptureTower, .buyperks {
+  margin-bottom: 0; /* Remove any bottom margin from these sections */
+}
+
+.footer {
+  display: flex;
+  margin-top: 0; 
+  padding-top: 8px; 
+  padding-bottom: 8px; 
+  text-align: center;
+  background-color: #DADC9B;
+  color: black;
+  font-family: 'K2Bold';
+  border: 3px solid black;
+  display: flex; /* Gebruik flexbox om items naast elkaar te plaatsen */
+  justify-content: space-between; /* Zorg voor gelijke ruimte tussen de items */
+  align-items: flex-start; /* Zorg ervoor dat de items aan de bovenkant van de container uitgelijnd zijn */
+  gap: 20px; /* Optioneel: Stel ruimte in tussen de items */
+}
+
+.footer h3{
+font-size: 35px;
+
+}
